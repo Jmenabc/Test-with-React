@@ -13,10 +13,12 @@ function App() {
           <div>
             <User
               color={"blue"}
-              name="Javier"/>
+              name="Javier" />
+            <button>Cerrar Sesión</button>
           </div>
           : <div>
-
+            <p>No has iniciado sesión</p>
+            <button>Iniciar Sesión</button>
           </div>
       }
     </>
