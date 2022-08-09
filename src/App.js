@@ -5,11 +5,11 @@ import Formulario from './components/Formulario';
 import ContadorFuncional from './components/ContadorFuncional';
 import './elements/App.css';
 import Boton from './elements/Boton';
-
+import EjemploUseReducer from './components/useReducer';
 function App() {
 
   const [sesion, cambiarEstadoSesion] = useState(false);
-  
+
   return (
     <div className='contenedor'>
       {
@@ -21,6 +21,7 @@ function App() {
               years="20"
               country="España"
             />
+            {/* <EjemploUseReducer /> */}
             {/* <ContadorClass /> */}
             <ContadorFuncional />
             <Boton largo marginTop onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesión</Boton>
