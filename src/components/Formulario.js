@@ -15,7 +15,7 @@ const FormularioInicioSesión = (props) => {
     const onSubmit = (event) => {
         event.preventDefault();
 
-        if (username === 'Javier' && password === 'TesteoDeFormulario') {
+        if (username === 'Javier' && password === '123') {
             props.function(true);
         } else {
             alert('Datos incorrectos, intentelo de nuevo');

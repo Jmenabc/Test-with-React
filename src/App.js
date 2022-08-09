@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import User from './components/User';
 import Formulario from './components/Formulario';
 import ContadorClass from './components/contador';
+import ContadorFuncional from './components/ContadorFuncional';
 function App() {
 
-  const [sesion, cambiarEstadoSesion] = useState(true);
-
+  const [sesion, cambiarEstadoSesion] = useState(false);
+  
   return (
     <>
       {
@@ -18,7 +19,8 @@ function App() {
               years="20"
               country="España"
             />
-            <ContadorClass />
+            {/* <ContadorClass /> */}
+            <ContadorFuncional />
             <button onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesión</button>
           </div>
           : <div>
