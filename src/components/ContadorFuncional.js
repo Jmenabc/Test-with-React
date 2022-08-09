@@ -16,8 +16,8 @@ const ContadorFuncional = () => {
     return ( 
         <div>
             <h1>Contador: {count}</h1>
-            <button className={styles.boton} onClick={() => incrementar()}>Incrementar</button>
-            <button className={styles.boton} onClick={() => disminuir()}>Disminuir</button>
+            <Boton className={styles.boton} marginRight negro onClick={() => incrementar()}>Incrementar</Boton>
+            <Boton className={styles.boton} negro onClick={() => disminuir()}>Disminuir</Boton>
         </div>
     );
 }

@@ -23,7 +23,7 @@ function App() {
             />
             {/* <ContadorClass /> */}
             <ContadorFuncional />
-            <Boton onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesión</Boton>
+            <Boton largo marginTop onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesión</Boton>
           </div>
           : <div>
             <Formulario function={cambiarEstadoSesion} />
