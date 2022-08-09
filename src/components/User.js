@@ -1,6 +1,6 @@
 import React from 'react';
 
-const User = ({ name, color }) => {
+const User = ({ name, color, years, country }) => {
     return (
         <div>
             <h1
@@ -8,6 +8,8 @@ const User = ({ name, color }) => {
             >
                 Bienvenido {name}
             </h1>
+            <p>Tienes {years} años</p>
+            <p>Vives en {country}</p>
         </div>
     );
 }
