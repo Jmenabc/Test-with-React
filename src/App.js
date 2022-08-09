@@ -4,6 +4,7 @@ import User from './components/User';
 import Formulario from './components/Formulario';
 import ContadorFuncional from './components/ContadorFuncional';
 import './elements/App.css';
+import Boton from './elements/Boton';
 
 function App() {
 
@@ -22,10 +23,9 @@ function App() {
             />
             {/* <ContadorClass /> */}
             <ContadorFuncional />
-            <button onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesión</button>
+            <Boton onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesión</Boton>
           </div>
           : <div>
-            <p>Si quieres ver la información que se encuentra a continuación porfavor inicia sesión</p>
             <Formulario function={cambiarEstadoSesion} />
             {/* <button onClick={() => cambiarEstadoSesion(true)}>Iniciar Sesión</button> */}
           </div>
