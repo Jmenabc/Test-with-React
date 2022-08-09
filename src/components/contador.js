@@ -7,6 +7,18 @@ class Contador extends Component {
         super(props);
         this.state = { contador: 0 }
     }
+    //LIFE CYCLE METHODS
+    componentDidMount() {
+        // ... Llamamos a la API ...
+    }
+
+    componentDidUpdate() {
+        //... Se actualiza el componente ...
+    }
+
+    componentWillUnmount() {
+        //... Se ejecuta lo que queramos antes de eliminar el DOM ...
+    }
 
     incrementar() {
         this.setState((prevState) => {

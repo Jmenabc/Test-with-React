@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './../elements/Formulario.css';
 
 const FormularioInicioSesión = (props) => {
     const [username, changeUsername] = useState('');
@@ -25,32 +26,36 @@ const FormularioInicioSesión = (props) => {
     }
 
     return (
-        <form action='' onSubmit={onSubmit}>
-            <p>Usuario: {username}</p>
-            <p>Contraseña: {password}</p>
+        <form
+            action=''
+            onSubmit={onSubmit}
+            className='formulario'
+        >
+            <h1>No has iniciado sesión</h1>
             <div>
-                <label htmlFor='usuario'>Usuario</label>
+                <label htmlFor='usuario' className='label'>Usuario</label>
                 <input
                     type='text'
                     name='usuario'
                     id='usuario'
                     value={username}
                     onChange={onChange}
-
+                    className='input'
                 />
             </div>
 
             <div>
-                <label htmlFor='password'>Contraseña</label>
+                <label htmlFor='password' className='label'>Contraseña</label>
                 <input
                     type='password'
                     name='password'
                     id='password'
                     value={password}
                     onChange={onChange}
+                    className='input'
                 />
             </div>
-            <button type='submit'>Iniciar sesión</button>
+            <button type='submit' className='boton'>Iniciar sesión</button>
         </form>
     );
 }
