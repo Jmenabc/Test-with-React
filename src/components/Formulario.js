@@ -1,19 +1,31 @@
 import React, { useState } from 'react';
 
-const FormularioInicioSesión = () => {
+const FormularioInicioSesión = (props) => {
     const [username, changeUsername] = useState('');
     const [password, changePassword] = useState('');
-    
-    const onChangeUsername = (event) => {
-        changeUsername(event.target.value)
+
+    const onChange = (event) => {
+        if (event.target.name === 'usuario') {
+            changeUsername(event.target.value)
+        } else if (event.target.name === 'password') {
+            changePassword(event.target.value)
+        }
     }
 
-    const onChangePassword = (event) => {
-        changePassword(event.target.value)
+    const onSubmit = (event) => {
+        event.preventDefault();
+
+        if (username === 'Javier' && password === 'TesteoDeFormulario') {
+            props.function(true);
+        } else {
+            alert('Datos incorrectos, intentelo de nuevo');
+            changeUsername('');
+            changePassword('');
+        }
     }
 
     return (
-        <form action=''>
+        <form action='' onSubmit={onSubmit}>
             <p>Usuario: {username}</p>
             <p>Contraseña: {password}</p>
             <div>
@@ -23,7 +35,8 @@ const FormularioInicioSesión = () => {
                     name='usuario'
                     id='usuario'
                     value={username}
-                    onChange={onChangeUsername}
+                    onChange={onChange}
+
                 />
             </div>
 
@@ -34,7 +47,7 @@ const FormularioInicioSesión = () => {
                     name='password'
                     id='password'
                     value={password}
-                    onChange={onChangePassword}
+                    onChange={onChange}
                 />
             </div>
             <button type='submit'>Iniciar sesión</button>

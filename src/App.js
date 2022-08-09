@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import User from './components/User';
 import Formulario from './components/Formulario';
+import ContadorClass from './components/contador';
 function App() {
 
-  const [sesion, cambiarEstadoSesion] = useState(false);
+  const [sesion, cambiarEstadoSesion] = useState(true);
 
   return (
     <>
@@ -14,15 +15,16 @@ function App() {
             <User
               color="blue"
               name="Javier"
-              years= "20"
+              years="20"
               country="España"
-               />
+            />
+            <ContadorClass />
             <button onClick={() => cambiarEstadoSesion(false)}>Cerrar Sesión</button>
           </div>
           : <div>
             <h1>No has iniciado sesión</h1>
             <p>Si quieres ver la información que se encuentra a continuación porfavor inicia sesión</p>
-            <Formulario/>
+            <Formulario function={cambiarEstadoSesion} />
             {/* <button onClick={() => cambiarEstadoSesion(true)}>Iniciar Sesión</button> */}
           </div>
       }
