@@ -6,8 +6,9 @@ import ContadorFuncional from './components/ContadorFuncional';
 import './elements/App.css';
 import Boton from './elements/Boton';
 import EjemploUseReducer from './components/useReducer';
-function App() {
+import Blog from './components/Blog';
 
+function App() {
   const [sesion, cambiarEstadoSesion] = useState(false);
 
   return (
@@ -21,6 +22,7 @@ function App() {
               years="20"
               country="España"
             />
+            <Blog />
             {/* <EjemploUseReducer /> */}
             {/* <ContadorClass /> */}
             <ContadorFuncional />
